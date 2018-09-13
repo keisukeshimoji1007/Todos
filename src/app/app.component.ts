@@ -10,6 +10,7 @@ import { Todo } from './todo';
 export class TodoApp {
     todoStore: TodoStoreService;
     newTodoText = '';
+    title = 'Todos';
 
     constructor(todoStore: TodoStoreService) {
         this.todoStore = todoStore;
