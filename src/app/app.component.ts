@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import {TodoStore, Todo} from './store';
+import { TodoStoreService } from './todo-store.service';
+import { Todo } from './todo';
 
 @Component({
   selector: 'todo-app',
@@ -7,10 +8,10 @@ import {TodoStore, Todo} from './store';
   styleUrls: ['./app.component.css']
 })
 export class TodoApp {
-    todoStore: TodoStore;
+    todoStore: TodoStoreService;
     newTodoText = '';
 
-    constructor(todoStore: TodoStore) {
+    constructor(todoStore: TodoStoreService) {
         this.todoStore = todoStore;
     }
 
