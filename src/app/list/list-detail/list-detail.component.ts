@@ -9,8 +9,9 @@ import { Todo } from '../../todo';
 })
 export class ListDetailComponent implements OnInit {
 
-    @Input() 
+@Input() 
     todoStore: TodoStoreService;
+    todo: Todo;
 
   constructor(todoStore: TodoStoreService) {
     this.todoStore = todoStore;

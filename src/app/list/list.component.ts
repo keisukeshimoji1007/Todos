@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { TodoStoreService } from '../todo-store.service';
 import { Todo } from '../todo';
+import { EventEmitter } from 'events';
 
 @Component({
   selector: 'app-list',
@@ -9,10 +10,11 @@ import { Todo } from '../todo';
 })
 export class ListComponent implements OnInit { 
   
+  @Output() TodoStoreService = new EventEmitter();
   todoStore: TodoStoreService;
  
   constructor(todoStore:TodoStoreService) { 
-    
+
     this.todoStore = todoStore;
 }
 
