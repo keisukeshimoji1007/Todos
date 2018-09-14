@@ -1,15 +1,16 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { TodoStoreService } from '../../todo-store.service';
 import { Todo } from '../../todo';
 
 @Component({
   selector: 'app-list-detail',
   templateUrl: './list-detail.component.html',
-  styleUrls: ['./list-detail.component.css']
+  styleUrls: ['./list-detail.component.css'],
 })
 export class ListDetailComponent implements OnInit {
 
-   todoStore: TodoStoreService;
+    @Input() 
+    todoStore: TodoStoreService;
 
   constructor(todoStore: TodoStoreService) {
     this.todoStore = todoStore;
@@ -46,5 +47,5 @@ export class ListDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  }
-
+  
+}
